@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db7de7fa-d3ac-4505-b01a-46c1b6321185">
+	<property name="ireport.zoom" value="2.143588810000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="188"/>
+	<queryString>
+		<![CDATA[SELECT
+     hasil_perhitungan.`alternatif` AS hasil_perhitungan_alternatif,
+     hasil_perhitungan.`nama_karyawan` AS hasil_perhitungan_nama_karyawan,
+     hasil_perhitungan.`nilai` AS hasil_perhitungan_nilai
+FROM
+     `hasil_perhitungan` hasil_perhitungan
+ORDER BY nilai DESC]]>
+	</queryString>
+	<field name="hasil_perhitungan_alternatif" class="java.lang.String"/>
+	<field name="hasil_perhitungan_nama_karyawan" class="java.lang.String"/>
+	<field name="hasil_perhitungan_nilai" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<frame>
+				<reportElement uuid="20fa059f-02a7-478e-bfb8-176572d56868" x="0" y="0" width="555" height="96"/>
+				<staticText>
+					<reportElement uuid="46b5898a-35f5-4b3f-9c28-9ee88d288337" x="103" y="15" width="378" height="30"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PT. INFO SOLUSINDO DATA UTAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="46b5898a-35f5-4b3f-9c28-9ee88d288337" x="103" y="45" width="378" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Jl. MT Haryono St No. Kav. 33, RT.003 / RW.002]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="46b5898a-35f5-4b3f-9c28-9ee88d288337" x="103" y="60" width="378" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Kelurahan Cikoko, Kecamatan Pancoran, Kota Jakarta Selatan]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="4d27d9f4-d681-40f0-939f-02550e4445ab" x="11" y="1" width="92" height="92"/>
+					<imageExpression><![CDATA["D:\\NetbeansProject\\Penilaian_Karyawan\\src\\Gambar\\logo_putih.jpg"]]></imageExpression>
+				</image>
+				<line>
+					<reportElement uuid="1eb860da-5cf2-445b-bd1e-78fe872795e2" x="0" y="93" width="555" height="1"/>
+				</line>
+				<line>
+					<reportElement uuid="1eb860da-5cf2-445b-bd1e-78fe872795e2" x="0" y="94" width="555" height="1"/>
+				</line>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="46b5898a-35f5-4b3f-9c28-9ee88d288337" x="0" y="11" width="555" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA HASIL PEMERINGKATAN MENGGUNAKAN METODE SAW]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement uuid="1eb860da-5cf2-445b-bd1e-78fe872795e2" x="0" y="11" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="ddabdad7-dbb2-4c6d-ad0e-afa162b703cd" x="113" y="12" width="100" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alternatif]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2a901953-7d86-4111-89a4-354afcbd8006" x="213" y="12" width="116" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1be2d13e-9a0e-4ea9-a1c1-9a99364abd44" x="329" y="12" width="100" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nilai Akhir]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1eb860da-5cf2-445b-bd1e-78fe872795e2" x="0" y="40" width="555" height="1" forecolor="#999999"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement uuid="354c2e21-a271-4a6d-8220-93700f3ad7dc" x="113" y="0" width="100" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hasil_perhitungan_alternatif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d3b083ad-f675-48dd-ae9c-ccbf22347ed8" x="213" y="0" width="116" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hasil_perhitungan_nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e0a93a2-0931-4e9a-b093-18d22d2206bf" x="329" y="0" width="100" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hasil_perhitungan_nilai}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="1eb860da-5cf2-445b-bd1e-78fe872795e2" x="0" y="29" width="555" height="1" forecolor="#999999"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="140" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="dc28dced-b371-401a-8e52-f5fae5716d7d" x="346" y="10" width="209" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jakarta, "+new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a11ebcd0-51bb-4e18-9ac8-240d24eef933" x="346" y="117" width="209" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[(.........................................................)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a6fa9615-d1ee-408e-ac25-399859fa612d" x="346" y="116" width="209" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
